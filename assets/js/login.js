@@ -62,7 +62,7 @@ $(function() {
                     return layer.msg(rel.message)
                 }
                 layer.msg('登录成功')
-                location.href = 'http://127.0.0.1:5500/web_bigevent/index.html'
+                location.href = '/index.html'
                     // 吧服务器返回的token存入浏览器中，需要的时候在取出来使用
                 localStorage.setItem('token', rel.token)
             }
