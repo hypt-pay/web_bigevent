@@ -47,4 +47,5 @@ function rendUserInfo(rel) {
         $('.layui-nav-img').attr('src', rel.user_pic).show()
     }
 
+
 }
