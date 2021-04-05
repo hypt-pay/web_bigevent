@@ -18,7 +18,7 @@ $(function() {
         })
         // 发起请求修改密码
         // 监听submit事件
-    $('.layui-form').on('submit', function(e) {
+    $('#updatePwd').on('submit', function(e) {
         e.preventDefault()
             // 发起ajax请求
         $.ajax({
@@ -33,7 +33,7 @@ $(function() {
                 location.href = '/login.html'
                 localStorage.removeItem('token')
                     // 重置表单
-                $('.layui-form')[0].reset()
+                $('#updatePwd')[0].reset()
             }
         })
     })

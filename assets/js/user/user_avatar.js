@@ -19,7 +19,7 @@ $(function() {
         })
         // 给文件域绑定一个change事件
     $('#file').on('change', function(e) {
-            console.log(e);
+
             // 得到被选中的文件
             var fileList = e.target.files
                 // 判断是否有被选中的文件
@@ -47,8 +47,7 @@ $(function() {
                 height: 100
             }).toDataURL('image/png')
             // 将 Canvas 画布上的内容，转化为 base64 格式的字符 串
-        console.log(dataURL);
-        // 发起ajax请求
+            // 发起ajax请求
         $.ajax({
             url: '/my/update/avatar',
             method: 'post',
@@ -59,7 +58,6 @@ $(function() {
                 if (rel.status !== 0) {
                     return layer.msg('上传头像失败')
                 }
-                console.log(rel);
                 layer.msg('上传头像成功')
                 window.parent.getUserInfo()
 
